@@ -1,0 +1,42 @@
+$common::genheap{ -255 }
+	General storage area for kernel-related stuff. Probably shouldn't
+	mess with this too much. -255 can be passed to some functions
+	(noteably e_log()) to tell that a message is coming from the kernel
+	itself, and not a particular client.
+
+$common::genheap{ Wheel_ID }{ address }
+	Contains the IP address of a connected client
+
+$common::genheap{ Wheel_ID }{ uname }
+	Contains the user's handle. This should be considered read-only.
+
+$common::genheap{ Wheel_ID }{ seq }
+	Contains the user's unique seq number, retrieved from the MySQL
+	database.
+
+$common::genheap{ Wheel_ID }{ priv }
+	Contains the user's privilege level. Anything higher than 90 is
+	considered to be sysop-level.
+
+$common::genheap{ Wheel_ID }{ fn }
+	Contains the user's first name, if given
+
+$common::genheap{ Wheel_ID }{ ln }
+	Contains the user's first name, if given
+
+$common::genheap{ Wheel_ID }{ intime }
+	Contains an array reference to when the user logged in. This should
+	not be messed with.
+
+$common::genheap{ Wheel_ID }{ where }
+	Contains what to display in the public "Who's Online". If this is
+	not set, the user will be effectively 'hidden' from public view.
+
+$common::state{ Wheel_ID }
+	This is the internal 'state', by which the main application directs
+	input to modules by. Example: if a user's state is 'main_screen',
+	their input would get directed to main_screen::run().
+
+$heap->{ disco }{ Wheel_ID }
+	When this is defined, the client will be disconnected after all
+	pending output has been flushed to it.

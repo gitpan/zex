@@ -1,0 +1,6 @@
+Fix telnet protocol control codes to turn off local echo (for inputting a
+password), and to disable line buffering (to get single-char input)
+
+Finish the sysop_screen.pm plugin
+
+Write some installation documentation

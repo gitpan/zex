@@ -1,0 +1,9 @@
+
+The 'screens' MySQL table defines which files are outputted to the client at
+given stages. Screen names that are supported are:
+
+	'new_luser' for when a user logs in as 'new' and wishes to create
+		new account.
+	'main_screen' the main menu screen
+	'sysop_screen' the sysop menu screen
+	'login' the screen someone first sees when they connect

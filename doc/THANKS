@@ -1,0 +1,10 @@
+I would like to thank the following people for their help and support in
+making Zex BBS possible.
+
+revdiablo,	helped significantly with little issues
+dngor,		the almighty creator of POE... HAIL!
+Stevie-O,	helped a lot with telnet protocol control, wrote the
+		TelnetServer.pm module.
+Khisanth,	helped some with the telnet protocol control
+Psyber,		originally sparked my interest in programming in general, at
+		the age of 8
